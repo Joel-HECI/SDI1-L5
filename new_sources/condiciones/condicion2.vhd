@@ -1,0 +1,1 @@
+-- (010) Cuando el número Y sea mayor que el número B, debe verse la resta de Y y B; si la condición no se cumple muestra Y.

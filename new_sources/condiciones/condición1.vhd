@@ -1,0 +1,1 @@
+-- (001) Cuando el número X sea mayor que el número A, a la salida en LEDs debe verse  a la salida X menos A; si la condición no se cumple muestra X.

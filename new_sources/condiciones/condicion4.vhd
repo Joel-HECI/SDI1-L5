@@ -1,0 +1,1 @@
+-- (100) Si X y Y son menores que A y B debe observarse la resta de  Y y X; si la condición no se cumple muestra la resta de  C y D.

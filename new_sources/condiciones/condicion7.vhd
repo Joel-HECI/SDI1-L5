@@ -1,0 +1,1 @@
+-- (111) Elija varias operaciones aritméticas que involucren todos los números X, Y, A, B, C y D.  ( por ejemplo: (A+Y)+(B-X)+(C-Y)-(C-D) )

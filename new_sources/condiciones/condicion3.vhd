@@ -1,0 +1,1 @@
+-- (011) Si X y Y son mayores que A y B entonces debe realizarse la suma de X y Y; si la condición no se cumple muestra la suma de X y A.

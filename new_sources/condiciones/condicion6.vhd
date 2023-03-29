@@ -1,0 +1,1 @@
+-- (110) Realizar la operación XOR de X, Y y D
