@@ -3,18 +3,18 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity condicion2 is
+entity condicion5 is
 
 Port (A,B,C,D: in STD_LOGIC_VECTOR (3 downto 0);
       X,Y: in STD_LOGIC_VECTOR (3 downto 0);
       sal: out STD_LOGIC_VECTOR (3 downto 0));
-end condicion2;
+end condicion5;
 
-architecture Behavioral of condicion2 is
+architecture Behavioral of condicion5 is
     begin
         process (A,B,C,D,X,Y)
         begin
-            sal => X or Y;
+            sal <= X or Y;
 
         end process;
 

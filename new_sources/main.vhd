@@ -141,10 +141,10 @@ begin
 
     vis: entity work.vis_dinamica port map(
             clk => CLK,
-            BCD1 => num_in1 
+            BCD1 => num_in1,
             BCD2 => num_in2, 
             BCD3 => a,
-            BCD4 => b, 
+            BCD4 => b,
             ANODS => display,
             SAL7SEG => num_out);
     
