@@ -14,28 +14,28 @@ architecture tb of testbench is
 -- DUT component
 
 
-signal a_in, b_in, s_out: std_logic_vector(3 downto 0):= "0000";
-
-
+signal a_in, b_in, d_out: std_logic_vector(3 downto 0):= "0000";
+-- signal c_in: std_logic:='0';
 begin
 
-  COMP: entity work.sumador port map(
+  COMP: entity work.restador port map(
     a=>a_in,
     b=>b_in,
-
-    s=>s_out
+    -- c=>c_in,
+    d=>d_out
       );
 
   process
   begin
 
 
-    report "A+B";
+    report "A-B";
+    -- c_in<='0';
     a_in <= "1000";
     b_in <= "0001";
     wait for 1 ns;
 
-    report std_logic'image(s_out(3)) & std_logic'image(s_out(2)) & std_logic'image(s_out(1)) & std_logic'image(s_out(0)) ;
+    report std_logic'image(d_out(3)) & std_logic'image(d_out(2)) & std_logic'image(d_out(1)) & std_logic'image(d_out(0));
     
   
 
