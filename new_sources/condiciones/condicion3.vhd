@@ -2,22 +2,23 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.std_logic_arith.all;
 
 entity condicion3 is
 
-Port (A,B,C,D: in STD_LOGIC_VECTOR (3 downto 0);
+Port (A,B: in STD_LOGIC_VECTOR (3 downto 0);
       X,Y: in STD_LOGIC_VECTOR (3 downto 0);
       sal: out STD_LOGIC_VECTOR (3 downto 0));
 end condicion3;
 
 architecture Behavioral of condicion3 is
     begin
-        process (A,B,C,D,X,Y)
+        process (A,B,X,Y)
         begin
-            if Y > B and X > A then
-                sal <= X + Y;
+            if unsigned(Y) > unsigned(B) and unsigned(X) > unsigned(A) then
+                sal <= std_logic_vector(unsigned(X) + unsigned(Y));
             else
-                sal <= X + A;
+                sal <= std_logic_vector(unsigned(X) + unsigned(A));
             end if;
 
         end process;

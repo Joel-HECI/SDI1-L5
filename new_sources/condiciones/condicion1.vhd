@@ -2,20 +2,21 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.std_logic_arith.all;
 
 entity condicion1 is
 
-Port (A,B,C,D: in STD_LOGIC_VECTOR (3 downto 0);
-      X,Y: in STD_LOGIC_VECTOR (3 downto 0);
+Port (A: in STD_LOGIC_VECTOR (3 downto 0);
+      X: in STD_LOGIC_VECTOR (3 downto 0);
       sal: out STD_LOGIC_VECTOR (3 downto 0));
 end condicion1;
 
 architecture Behavioral of condicion1 is
     begin
-        process (A,B,C,D,X,Y)
+        process (A,X)
         begin
-            if X > A then
-                sal <= X - A;
+            if unsigned(X) > unsigned(A) then
+                sal <= std_logic_vector(unsigned(X) - unsigned(A));
             else
                 sal <= X;
             end if;

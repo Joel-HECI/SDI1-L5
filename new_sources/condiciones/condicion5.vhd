@@ -5,16 +5,17 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity condicion5 is
 
-Port (A,B,C,D: in STD_LOGIC_VECTOR (3 downto 0);
-      X,Y: in STD_LOGIC_VECTOR (3 downto 0);
+Port (X,Y: in STD_LOGIC_VECTOR (3 downto 0);
       sal: out STD_LOGIC_VECTOR (3 downto 0));
 end condicion5;
 
 architecture Behavioral of condicion5 is
     begin
-        process (A,B,C,D,X,Y)
+        process (X,Y)
         begin
-            sal <= X or Y;
+            for i in 0 to 3 loop
+            sal(i)<=X(i) or Y(i);
+            end loop;
 
         end process;
 
